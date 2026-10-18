@@ -1,4 +1,4 @@
-// 雛形のプラグイン wevocal.template（つまみが 1 つ。作る人の見本と、枠組みの確かめに使う）。アプリの「追加」の一覧には出さない
+// 雛形のプラグイン wevocal.template（つまみが 1 つ。開発者の見本と、枠組みの確かめに使う）。アプリの「追加」の一覧には出さない
 import { FxBase } from '../FxBase'
 import type { FxPlugin, HostInfo, PluginManifest } from '../types'
 

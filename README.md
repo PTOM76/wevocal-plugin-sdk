@@ -29,9 +29,10 @@ node plugin-sdk/scripts/wevocal-plugin.mjs build my-plugin
 
 ## 関連ファイル
 
-- `template-processor/`: プラグインの雛形
+- `template/`: プラグインの雛形 (方法1)
+- `template-processor/`: プラグインの雛形 (方法2)
 - `scripts/wevocal-plugin.mjs`: プラグインの作成・検証・テスト・ビルド
-- `types.ts`: TypeScript の型定義
+- `types.ts`: TypeScript型定義
 
 TypeScript で標準エフェクトと同様の実装を行う場合は、`wevocal-lib` の `web/src/plugins/` も参考になる。
 - https://github.com/PTOM76/wevocal-lib/tree/main/web/src

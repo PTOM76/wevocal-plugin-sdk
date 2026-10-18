@@ -1,4 +1,4 @@
-// WeVocal プラグインの型（プラグインを作る人向け。アプリの側はこれを import する。逆向きの import はしない）
+// WeVocal プラグインの型（プラグインを開発者向け。アプリの側はこれを import する。逆向きの import はしない）
 
 /** つまみ 1 つの定義 */
 export interface ParamDef {
