@@ -4,10 +4,10 @@ import type { FxInstance, HostInfo, ParamDef, PluginManifest } from './types'
 /** 値の更新をならす時間定数（秒） */
 export const SMOOTH = 0.01
 
-/** 範囲に丸める。選択肢があれば index に丸める */
+/** 範囲に丸める。選択肢とトグルは整数に丸める */
 export function clampParam(p: ParamDef, v: number): number {
   const x = Number.isFinite(v) ? v : p.default
-  const r = p.choices ? Math.round(x) : x
+  const r = p.choices || p.toggle ? Math.round(x) : x
   return Math.max(p.min, Math.min(p.max, r))
 }
 

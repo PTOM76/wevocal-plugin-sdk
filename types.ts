@@ -14,6 +14,8 @@ export interface ParamDef {
   log?: boolean
   /** 選択肢（訳文のキー）。あれば値は index */
   choices?: string[]
+  /** オンとオフのトグル（0 か 1。min 0、max 1 にする）。画面はチェックボックス */
+  toggle?: boolean
 }
 
 /** プラグインのマニフェスト（共通） */
@@ -122,6 +124,8 @@ export interface FxPlugin {
   manifest: PluginManifest
   /** 値から余韻の秒を求める（manifest.tail の代わり。ディレイのフィードバックなど値で変わるもの） */
   tail?: (values: Record<string, number>, bpm: number) => number
+  /** 値から遅れ（サンプル）を求める（manifest.latency の代わり。処理方式で遅れが変わるもの） */
+  latency?: (values: Record<string, number>) => number
   /** 'ja_jp' → { key: 訳 } */
   lang: Record<string, Record<string, string>>
   /** 独自の画面の HTML（manifest.ui を読んだもの） */
